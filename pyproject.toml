@@ -1,0 +1,10 @@
+[project]
+name = "PROJECT_NAME"
+description = "A fancy Python template for new projects"
+requires-python = ">=3.11"
+
+[tool.pip-tools]
+generate-hashes = true
+
+[tool.isort]
+profile = "black"

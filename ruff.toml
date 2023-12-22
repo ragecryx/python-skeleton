@@ -1,0 +1,39 @@
+[lint]
+select = [
+    "A",
+    "B",
+    "C4",
+    "D",
+    "DTZ",
+    "E",
+    "ERA",
+    "F",
+    "FLY",
+    "G",
+    "I",
+    "N",
+    "PERF",
+    "PGH",
+    "PIE",
+    "PT",
+    "PTH",
+    "RET",
+    "RUF",
+    "S",
+    "SIM",
+    "TRY",
+    "UP"
+]
+ignore = [
+    "E501",
+    "S105"
+]
+unfixable = [
+    "ERA"
+]
+
+[pydocstyle]
+convention = "google"
+
+[flake8-builtins]
+builtins-ignorelist = ["hash", "help", "id", "list", "type"]

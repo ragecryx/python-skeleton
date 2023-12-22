@@ -11,6 +11,12 @@ pyenv local project_name-3.11
 make setup
 ```
 
-**Note:** You may need to have some dependencies installed to be able to build the Python version mentioned above, in
+**Note #1:** You may need to have some dependencies installed to be able to build the Python version mentioned above, in
 Ubuntu you can do so by running `make apt-python-requirements`.
 
+**Note #2:** After you create a new project based on this template you may want to customize the `.in` files and run the following:
+
+```bash
+pip install pip-tools
+make requirements-dev.txt
+```

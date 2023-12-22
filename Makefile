@@ -27,12 +27,11 @@ apt-python-requirements:
 		libssl-dev lzma lzma-dev tk-dev uuid-dev zlib1g-dev
 
 requirements.txt: requirements.in
-	pip-compile requirements.in
+	pip-compile --generate-hashes requirements.in
 
-requirements-dev.txt: requirements-dev.in
-	pip-compile requirements-dev.in
+requirements-dev.txt: requirements.txt requirements-dev.in
+	pip-compile --generate-hashes requirements-dev.in
 
 .PHONY: clean
 clean:
 	find ./$(SRC) -type f -name "*.py[co]" -delete -or -type d -name "__pycache__" -delete
-
